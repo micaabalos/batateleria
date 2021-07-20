@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>PASTELERIA</title>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Pasteleria artesanal">
+        <meta name="keywords" content="PASTELERIA, TORTAS, DULCES, COMIDA, POSTRES, DESAYUNOS, MERIENDAS">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+    </head>
+    <body>
+        <div id="header" class="container-fluid px-0 header">
+            <nav class="navbar navbar-expand-lg navbar-light navbarBackground">
+                <a href="index.html" class="logo"><img class="logo" src="media/logo.jpg" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="chef.html">Sobre mi</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="tortas.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Productos
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="tortas.html#idTortas">Tortas</a>
+                            <a class="dropdown-item" href="tortas.html#cuadraditos">Cuadrados dulces</a>
+                          </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="preciosTortas.html">Precios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="batateleriaContacto.html">Contacto <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>  
+        </div>
+    	<div class="grilla__contacto">
+    		<div class="grilla__contacto-mapa">
+    			<p class="grilla__contacto-texto">Podes retirar tus pedidos en Almagro!</p>
+    			<iframe id="my__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.1217774810457!2d-58.42330820662174!3d-34.60108201870397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca6313a5030f%3A0xa9dfe591812d7dcf!2sGuardia%20Vieja%204100-4002%2C%20C1192AAP%20CABA!5e0!3m2!1ses!2sar!4v1624560866898!5m2!1ses!2sar" allowfullscreen="" loading="lazy"></iframe>
+    		</div>
+    		<div class="grilla__contacto-formulario">
+    			<p class="grilla__contacto-titulo">CONTACTO</p>
+    			<form action="#" method="GET">
+    				<p>Dejanos tu mensaje</p>
+    				<input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
+    				<input  type="email" name="email" placeholder="Ingresa tu mail" required>
+    				<textarea name="mensaje"></textarea>
+    				<label>¿Cómo nos conociste?</label>
+    				<select name="opciones">
+    					<option selected disabled>Seleccionar una opción</option>
+    					<option>Redes Sociales</option>
+    					<option>Radio o Tv</option>
+    					<option>Familiar o amigo</option>
+    				</select>
+    				<input type="submit" name="enviar" value="enviar">
+    				<input type="reset" value="reset">
+    			</form>
+    		</div>
+    	</div>
+    	<div class="footer">
+    	   <p>BATATELERIA. Pastelería artesanal. Ciudad Autonoma de Buenos Aires, Argentina, 2021.</p>
+    	</div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </body>
+</html>
