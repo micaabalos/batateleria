@@ -36,16 +36,13 @@ h3 {
     font-size: 1rem;
 }
 #tortas{
-    width: 350px;
+    width: 30%;
     margin-bottom: 20px;
 }
 /*sobre mi*/
 .grillaSobreMi {
-    display: grid;
-    grid-template-areas: 
-    "intro"
-    "foto";
-    justify-items: center;
+    @include grillas; 
+    grid-template-areas: "intro" "foto";
 }
 .aboutMe {
     grid-area: intro;
@@ -57,17 +54,16 @@ h3 {
     justify-self: center;
 }
 .tortaOreo {
-    width: 350px;
+    width: 50%;
     padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
 }
 /*productos*/
 .grillaProductos {
-    display: grid;
-    grid-template-areas: 
-    "productos"
-    "columnaUno"
-    "columnaDos";
-    justify-items: center;
+    @include grillas; 
+    grid-template-areas: "productos" "columnaUno" "columnaDos";
 }
 .productos {
     grid-area: productos;
@@ -85,41 +81,41 @@ h3 {
     text-align: center;
     margin-bottom: 25px;
 }
-.grillaProductos p {
+.grillaProductos {
+  p {
     margin: 15px;
     font-weight: bold;
     text-align: center;
-}
-.grillaProductos img {
-    height: 15rem;
-    margin: 15px;
+  }
+  img {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
 /*precios*/
 .grillaPrecios {
-    display: grid;
-    grid-template-areas: 
-    "precios"
-    "fotosprecios";
-    justify-items: center;
+    @include grillas; 
+    grid-template-areas: "precios" "fotosprecios";
 }
 .precios {
     grid-area: precios;
 }
 .fotosPrecios {
-    grid-area: fotosprecios;
-}
-.fotosPrecios img {
-    width: 300px;
-    margin-left: 40px;
+  grid-area: fotosprecios;
+  img {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     padding: 10px;
+  }
 }
 /*contacto*/
 .grilla__contacto {
-    display: grid;
-    grid-template-areas: 
-    "formulario"
-    "map";
-    justify-items: center;
+    @include grillas; 
+    grid-template-areas: "formulario" "map";
 }
 .grilla__contacto-formulario {
     grid-area: formulario;
@@ -169,17 +165,16 @@ select {
     padding: 3px;
     text-align: center;
 }
-
 @media all and (min-width: 768px){
     .grilla__contacto {
-        grid-template-areas: 
-        "formulario map";
+        grid-template-areas: "formulario map";
     }
-    form input {
-        width:$ancho+100;
+    form {
+        input, textarea {
+            width:$ancho+100;
+        }
     }
     textarea {
-        width:$ancho+100;
         height: 100px;
     }
     select {
@@ -194,24 +189,15 @@ select {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .fotosPrecios img {
-        margin: 10px;
-        margin-left: 60px;
-    }
     .grillaProductos {
-        grid-template-areas: 
-        "productos productos"
-        "columnaUno columnaDos";
+        grid-template-areas: "productos productos" "columnaUno columnaDos";
     }
 }
 @media all and (min-width: 992px){
     body{
     background-color: #f9ab003b
     }
-    .header{
-    background-color: #f9ab0052;
-    }
-    .navbarBackground{
+    .header, .navbarBackground {
     background-color: #f9ab0052;
     }
     .titulos {
@@ -221,15 +207,15 @@ select {
     width: 650px;
     }
     .grilla__contacto {
-        grid-template-areas: 
-        "formulario map";
+        grid-template-areas: "formulario map";
     }
-    form input {
-        width:300px;
+    form {
+        input, textarea {
+            width: 300px;
+        }
     }
     textarea {
-        width:300px;
-        height: 100px;
+    height: 100px;
     }
     select {
         width:300px;
@@ -242,29 +228,21 @@ select {
         margin-left: 150px;
     }
     .grillaSobreMi {
-        grid-template-areas:
-        "intro foto";
+        grid-template-areas: "intro foto";
     }
     .grillaProductos {
-        grid-template-areas: 
-        "productos productos"
-        "columnaUno columnaDos";
-    }
-    .grillaProductos img {
-    height: 20rem;
+        grid-template-areas: "productos productos" "columnaUno columnaDos";
     }
     .fotosPrecios {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .fotosPrecios img {
-        width: 600px;
-        padding: 25px;
-        margin-top: 40px;
-        margin-left: 0;
-    }
     .fotosPrecios img:hover {
         transform: scale(1.1);
     }
 }
+
+
+            
+    

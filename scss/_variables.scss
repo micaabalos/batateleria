@@ -1,2 +1,6 @@
 $titulos: 1rem;
 $ancho: 200px;
+@mixin grillas{
+	display: grid;
+    justify-items: center;
+}
